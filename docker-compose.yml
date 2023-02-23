@@ -1,0 +1,15 @@
+version: "2.1"
+
+services:
+  core-keeper:
+    image: catcafegg/core-keeper
+    environment:
+      - WORLDNAME="DockerServer"
+      - GAMEID="MyCoreKeeperDockerServer"
+      - WORLDINDEX=
+      - WORLDSEED=0
+      - DATAPATH=
+      - MAXPLAYERS=8
+    volumes:
+      - ~/core-keeper/data:/core-keeper
+    restart: always
